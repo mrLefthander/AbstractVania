@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
 
     bool isPlayerRunning = Mathf.Abs(controlThrow) > Mathf.Epsilon;
     myAnimator.SetBool("isRunning", isPlayerRunning);
+
+
     FlipSprite(controlThrow);
   }
 
