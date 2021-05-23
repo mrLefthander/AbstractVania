@@ -94,8 +94,6 @@ public class PlayerInputHandler : MonoBehaviour
 
     myRigidbody.gravityScale = 3f;
     myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpSpeed);
-    //myAnimator.SetBool("isJumping", true);
-
   }
 
 

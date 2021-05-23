@@ -1491,8 +1491,8 @@ GameObject:
   - component: {fileID: 918996356}
   - component: {fileID: 918996355}
   - component: {fileID: 918996357}
-  - component: {fileID: 918996359}
   - component: {fileID: 918996358}
+  - component: {fileID: 918996359}
   m_Layer: 8
   m_Name: Ladders
   m_TagString: Untagged
@@ -1698,56 +1698,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 918996359}
     m_ColliderPaths:
-    - - X: -28554729
-        Y: -20039162
-      - X: -28554788
-        Y: -20039162
-      - X: -28554788
-        Y: -30039103
-      - X: -28554729
-        Y: -30039162
-      - X: -21445271
-        Y: -30039162
-      - X: -21445212
-        Y: -30039103
-      - X: -21445212
-        Y: -20039162
-      - X: -21445271
-        Y: -20039162
-      - X: -21445212
-        Y: -20039103
-      - X: -21445212
-        Y: -10039162
-      - X: -21289021
-        Y: -10039162
-      - X: -21288962
-        Y: -10039103
-      - X: -21288962
-        Y: -3242146
-      - X: -21289021
-        Y: -3242087
-      - X: -28632853
-        Y: -3242087
-      - X: -28632912
-        Y: -3242146
-      - X: -28632912
-        Y: -10039103
-      - X: -28632853
-        Y: -10039162
-      - X: -28554788
-        Y: -10039162
-      - X: -28554788
-        Y: -20039103
+    - - X: -28710938
+        Y: -3242187
+      - X: -28710938
+        Y: -30039062
+      - X: -21210938
+        Y: -30039062
+      - X: -21210938
+        Y: -3242187
   m_CompositePaths:
     m_Paths:
-    - - {x: -2.1445565, y: -3.0039163}
-      - {x: -2.144492, y: -1.0039163}
-      - {x: -2.1288962, y: -1.003881}
-      - {x: -2.1289315, y: -0.3242087}
-      - {x: -2.8632913, y: -0.3242439}
-      - {x: -2.863256, y: -1.0039163}
-      - {x: -2.8554788, y: -1.0039456}
-      - {x: -2.8554437, y: -3.0039163}
+    - - {x: -2.1211233, y: -3.0039062}
+      - {x: -2.1211233, y: -0.3242187}
+      - {x: -2.8710938, y: -0.32424802}
+      - {x: -2.8710644, y: -3.0039062}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!19719996 &918996359
@@ -1902,16 +1866,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 821745415754565113, guid: 5a56d441c6890cf47a24d897dea0dbb5, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
+      propertyPath: m_Size.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 821745415754565113, guid: 5a56d441c6890cf47a24d897dea0dbb5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Size.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 821745415754565113, guid: 5a56d441c6890cf47a24d897dea0dbb5, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -518842387
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 821745415754565114, guid: 5a56d441c6890cf47a24d897dea0dbb5, type: 3}
       propertyPath: m_RootOrder
@@ -1960,10 +1924,6 @@ PrefabInstance:
     - target: {fileID: 821745415754565119, guid: 5a56d441c6890cf47a24d897dea0dbb5, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625098706441114701, guid: 5a56d441c6890cf47a24d897dea0dbb5, type: 3}
-      propertyPath: climbSpeed
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a56d441c6890cf47a24d897dea0dbb5, type: 3}
