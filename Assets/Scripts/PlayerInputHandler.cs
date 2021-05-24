@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerInputHandler : MonoBehaviour
@@ -20,14 +21,16 @@ public class PlayerInputHandler : MonoBehaviour
   private Rigidbody2D myRigidbody;
   private Animator myAnimator;
   private SpriteRenderer mySpriteRenderer;
-  private CapsuleCollider2D myCollider;
+  private CapsuleCollider2D myBodyCollider;
+  private BoxCollider2D myFeetCollider;
 
   private void Start()
   {
     myRigidbody = GetComponent<Rigidbody2D>();
     myAnimator = GetComponent<Animator>();
     mySpriteRenderer = GetComponent<SpriteRenderer>();
-    myCollider = GetComponent<CapsuleCollider2D>();
+    myBodyCollider = GetComponent<CapsuleCollider2D>();
+    myFeetCollider = GetComponent<BoxCollider2D>();
   }
 
   public void OnMoveInput(InputAction.CallbackContext context)
@@ -40,7 +43,7 @@ public class PlayerInputHandler : MonoBehaviour
   private void ClimbLadder(InputAction.CallbackContext context)
   {
     movementInput = context.ReadValue<Vector2>();
-    bool isTouchingLadder = myCollider.IsTouchingLayers(LayerMask.GetMask("Ladder"));
+    bool isTouchingLadder = myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Ladder"));
     if (!isTouchingLadder)
     {
       myAnimator.SetBool("isClimbing", false);
@@ -85,7 +88,7 @@ public class PlayerInputHandler : MonoBehaviour
 
   public void OnJumpInput(InputAction.CallbackContext context)
   {
-    bool isGrounded = myCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Ladder"));
+    bool isGrounded = myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Ladder"));
 
     if (!context.performed || !isGrounded)
     {

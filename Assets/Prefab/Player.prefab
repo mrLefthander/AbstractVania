@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6631667483836339874}
   - component: {fileID: 3064317389215367501}
   - component: {fileID: 8625098706441114701}
+  - component: {fileID: 148282535768835998}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -123,8 +124,8 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: b9f371ee6d7855d45885cb042ea360e7, type: 2}
-  m_Interpolate: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -137,12 +138,12 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 821745415754565119}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b9f371ee6d7855d45885cb042ea360e7, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0055, y: 0.0055}
-  m_Size: {x: 0.6155, y: 0.8132}
+  m_Offset: {x: 0.005499989, y: 0.01319319}
+  m_Size: {x: 0.6155, y: 0.79781365}
   m_Direction: 0
 --- !u!114 &3064317389215367501
 MonoBehaviour:
@@ -221,3 +222,29 @@ MonoBehaviour:
   runSpeed: 5
   jumpSpeed: 10
   climbSpeed: 2
+--- !u!61 &148282535768835998
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821745415754565119}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b9f371ee6d7855d45885cb042ea360e7, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0025645494, y: -0.37181246}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.35890126, y: 0.061481}
+  m_EdgeRadius: 0
