@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +14,8 @@ public class PlayerInputHandler : MonoBehaviour
   private float jumpSpeed = 10f;
   [SerializeField]
   private float climbSpeed = 5f;
+  [SerializeField]
+  private Vector2 deathKick = new Vector2(0f, 2f);
 
   private Vector2 movementInput;
   private Rigidbody2D myRigidbody;
@@ -23,6 +23,8 @@ public class PlayerInputHandler : MonoBehaviour
   private SpriteRenderer mySpriteRenderer;
   private CapsuleCollider2D myBodyCollider;
   private BoxCollider2D myFeetCollider;
+
+  private bool isDead = false;
 
   private void Start()
   {
@@ -33,8 +35,14 @@ public class PlayerInputHandler : MonoBehaviour
     myFeetCollider = GetComponent<BoxCollider2D>();
   }
 
+  private void Update()
+  {
+    Die();
+  }
+
   public void OnMoveInput(InputAction.CallbackContext context)
   {
+    if(isDead) { return; }
     movementInput = context.ReadValue<Vector2>();
     ClimbLadder(context);
     Run(movementInput);
@@ -88,16 +96,23 @@ public class PlayerInputHandler : MonoBehaviour
 
   public void OnJumpInput(InputAction.CallbackContext context)
   {
+    if (isDead) { return; }
     bool isGrounded = myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Ladder"));
 
-    if (!context.performed || !isGrounded)
-    {
-      return;
-    }
+    if (!context.performed || !isGrounded) { return; }
 
     myRigidbody.gravityScale = 3f;
     myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpSpeed);
   }
 
-
+  private void Die()
+  {
+    if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazard"))) { return; }
+    isDead = true;
+    myAnimator.SetBool("isDead", isDead);
+    myRigidbody.velocity = Vector2.up * 2f;
+    myRigidbody.bodyType = RigidbodyType2D.Kinematic;
+    myBodyCollider.enabled = false;
+    myFeetCollider.enabled = false;
+  }
 }
