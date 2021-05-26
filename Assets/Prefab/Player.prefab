@@ -142,8 +142,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005499989, y: 0.01319319}
-  m_Size: {x: 0.6155, y: 0.79781365}
+  m_Offset: {x: 0.005499989, y: 0.010388464}
+  m_Size: {x: 0.6155, y: 0.8034231}
   m_Direction: 0
 --- !u!114 &3064317389215367501
 MonoBehaviour:
@@ -202,6 +202,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: eec1d129-91b5-4f38-bc19-969f81aaf0d5
     m_ActionName: PlayerControls/Jump[/Keyboard/space,/DualShock4GamepadHID/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: db629274-e5c4-4ddf-9f6a-1b1b80364b7b
+    m_ActionName: UI/Navigate[/DualShock4GamepadHID/leftStick/up,/DualShock4GamepadHID/rightStick/up,/DualShock4GamepadHID/leftStick/down,/DualShock4GamepadHID/rightStick/down,/DualShock4GamepadHID/leftStick/left,/DualShock4GamepadHID/rightStick/left,/DualShock4GamepadHID/leftStick/right,/DualShock4GamepadHID/rightStick/right,/DualShock4GamepadHID/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2a971e1c-3302-4c8c-8f6b-762d882c7d34
+    m_ActionName: UI/Submit[/Keyboard/enter,/DualShock4GamepadHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ca8e0d21-ae39-439d-b07a-3ca6337cb80c
+    m_ActionName: UI/Cancel[/Keyboard/escape,/DualShock4GamepadHID/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8a4c51c1-53cd-41c8-97a1-e40d50289466
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0eec6188-3cb8-4741-8181-63c49e6e525b
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9d024ad0-ea53-4adc-8ffb-0233755d8092
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bc7e3fbc-893f-4fe3-aaa8-733c4e1ea408
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18627802-ae6b-435f-9e4f-dfd601d5198d
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: PlayerControls
@@ -220,9 +252,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
-  jumpSpeed: 10
+  jumpSpeed: 12
   climbSpeed: 2
-  deathKick: {x: 3, y: 3}
+  sceneLoader: {fileID: 0}
 --- !u!61 &148282535768835998
 BoxCollider2D:
   m_ObjectHideFlags: 0
